@@ -39,17 +39,20 @@ function nomesMaiusculos() {
   console.log("Nomes: " + nomes);
 }
 
-adicionarVinho("Cabernet", "tinto", 2019, 8);
+function iniciar() {
+  adicionarVinho("Cabernet", "tinto", 2019, 8);
 
-let nome = prompt("Nome do vinho:");
-let tipo = prompt("Tipo (tinto, branco ou rosé):");
-let safra = Number(prompt("Safra:"));
-let estoque = Number(prompt("Estoque:"));
-adicionarVinho(nome, tipo, safra, estoque);
+  let nome = prompt("Nome do vinho:");
+  let tipo = prompt("Tipo (tinto, branco ou rosé):");
+  let safra = Number(prompt("Safra:"));
+  let estoque = Number(prompt("Estoque:"));
+  adicionarVinho(nome, tipo, safra, estoque);
 
-console.log("Todos os vinhos:");
-listarVinhos();
-console.log("Estoque abaixo de 5:");
-estoqueBaixo();
-estoqueTotal();
-nomesMaiusculos();
+  console.log("Todos os vinhos:");
+  listarVinhos();
+  console.log("Estoque abaixo de 5:");
+  estoqueBaixo();
+  estoqueTotal();
+  nomesMaiusculos();
+}
+setTimeout(iniciar, 500);
